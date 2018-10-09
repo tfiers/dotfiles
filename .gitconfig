@@ -1,0 +1,19 @@
+[alias]
+	logs = log HEAD~7.. --oneline
+	addu = add -u
+	addi = add -i
+	s = status
+	d = diff --word-diff
+	ds = diff --word-diff --staged
+	c = commit
+	ca = commit --amend
+	can = commit --amend --no-edit
+	cm = "!f() { git commit -m \"$1\"; }; f"
+	ri = "!f() { git rebase -i HEAD~${1-7}; }; f"
+	ls = "!f() { git log HEAD~${1-7}..; }; f"
+	go = "!f() { git addu; git commit -m \"$1\"; git push; }; f"
+[user]
+	email = tomas.fiers@gmail.com
+	name = Tomas Fiers
+[pull]
+	rebase = true
