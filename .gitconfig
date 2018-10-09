@@ -3,8 +3,8 @@
 	addu = add -u
 	addi = add -i
 	s = status
-	d = diff --word-diff
-	ds = diff --word-diff --staged
+	d = diff --word-diff . ":(exclude)*.pdf"
+	ds = diff --word-diff --staged . ":(exclude)*.pdf"
 	c = commit
 	ca = commit --amend
 	can = commit --amend --no-edit
