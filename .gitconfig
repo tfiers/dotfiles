@@ -3,15 +3,24 @@
 	addu = add -u
 	addi = add -i
 	s = status
-	d = diff --word-diff . ":(exclude)*.pdf"
-	ds = diff --word-diff --staged . ":(exclude)*.pdf"
+	sa = stash  # stash away
+	sl = stash list
+	sp = stash pop
+	d = diff --word-diff=color . ":(exclude)*.pdf" ":(exclude)*.ai"
+	ds = diff --word-diff=color --staged . ":(exclude)*.pdf" ":(exclude)*.ai"
 	c = commit
 	ca = commit --amend
 	can = commit --amend --no-edit
 	cm = "!f() { git commit -m \"$1\"; }; f"
-	ri = "!f() { git rebase -i HEAD~${1-7}; }; f"
+	ri = "!f() { git rebase -i HEAD~${1-7}; }; f" # Don't use `$`, braces, or `;` when typing command manually.
 	ls = "!f() { git log HEAD~${1-7}..; }; f"
-	go = "!f() { git addu; git commit -m \"$1\"; git push; }; f"
+	go = "!f() { git commit -m \"$1\"; git push; }; f"
+    ago = "!f() { git add *; git commit -m \"$1\"; git push; }; f"
+    gud = "!f() { git ago \"$1\"; }; f"
+	rv = remote -v
+    rh = reset HEAD * # discard changes in working dir
+    rl = reset --soft HEAD~1  # "revert" last commit. (Actual "git revert" command creates a new commit with reversals).
+    rlh = reset --hard HEAD~1  # "revert" last commit, do not keep contents as unstaged changes.
 [user]
 	email = tomas.fiers@gmail.com
 	name = Tomas Fiers
