@@ -58,8 +58,8 @@
     sa = stash  # "stash away" or "stash all"
     sl = stash list
     sp = stash pop
-    d = diff --word-diff=color . ":(exclude)*.pdf" ":(exclude)*.ai"
-    ds = diff --staged --word-diff=color . ":(exclude)*.pdf" ":(exclude)*.ai"
+    d = diff --word-diff=color .
+    ds = diff --staged --word-diff=color .
     c = commit
     ca = commit --amend
     can = commit --amend --no-edit
