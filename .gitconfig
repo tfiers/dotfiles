@@ -30,13 +30,10 @@
         #   %ar  Authoring date in 'relative' format.
         #   %d   Ref names (see `log.decorate`), if present, wrapped in
         #        parentheses and prepended with a space.
-        # 
         # Adapted from [https://stackoverflow.com/a/34778736/2611913]
 
 [alias]
-    
     # In all these Bash functions, yes, both `;` are necessary.
-
     logs = "!f() { git log -n ${1:-10}; }; f"
         # Bash syntax after `-n`:
         #   "first argument, or default value of `10` if not given".
@@ -52,8 +49,8 @@
         #   --date-order    The default, `--topo-order`, avoids showing commits
         #                   from multiple 'lines of history' intermixed.
         #                   Here we explicitly ask for that.
-    ls = "!f() { git logs; }; f"
-    lb = "!f() { git logb; }; f"
+    ls = "!f() { git logs $1; }; f"
+    lb = "!f() { git logb $1; }; f"
     addu = add -u
     addi = add -i
     s = status
@@ -67,10 +64,6 @@
     ca = commit --amend
     can = commit --amend --no-edit
     cm = "!f() { git commit -m \"$1\"; }; f"
-    ri = "!f() { git rebase -i $1; }; f"
-        # - Use as: `git ri {old_commit_hash}` (this is short for
-        #   `{old_commit_hash}..HEAD`). Or as: `git ri HEAD~7`.
-    rc = "rebase --continue"
     acm = "!f() { git add . & git cm \"$1\"; }; f"
         # `add *` doesn't seem to work nice in script. (Typing manually does
         # work though).
@@ -79,6 +72,10 @@
     go = "!f() { git cm \"$1\" & git push; }; f"
     ago = "!f() { git add . & git cm \"$1\" & git push; }; f"
     gud = "!f() { git ago \"$1\"; }; f"
+    ri = "!f() { git rebase -i $1; }; f"
+        # - Use as: `git ri {old_commit_hash}` (this is short for
+        #   `{old_commit_hash}..HEAD`). Or as: `git ri HEAD~7`.
+    rc = "rebase --continue"
     rv = remote -v
     rh = reset HEAD *
         # Unstage all.
