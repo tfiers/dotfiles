@@ -66,11 +66,9 @@
     ca = commit --amend
     can = commit --amend --no-edit
     cm = "!f() { git commit -m \"$1\"; }; f"
-    ri = "!f() { git rebase -i ${1:-HEAD~4}; }; f"
-        # - Use as `git ri {old_commit_hash}`
-        #   (This is short for `{old_commit_hash}..HEAD`).
-        # - If you provide no argument and have less than 4 commits, this will
-        #   error with a confusing message ("needed a single revision").
+    ri = "!f() { git rebase -i $1; }; f"
+        # - Use as: `git ri {old_commit_hash}` (this is short for
+        #   `{old_commit_hash}..HEAD`). Or as: `git ri HEAD~7`.
     rc = "rebase --continue"
     acan = "!f() { git add . & git can; }; f"
         # `add *` doesn't seem to work nice in script. (Typing manually does
