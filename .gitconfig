@@ -53,6 +53,7 @@
         #                   from multiple 'lines of history' intermixed.
         #                   Here we explicitly ask for that.
     ls = "!f() { git logs; }; f"
+    lb = "!f() { git logb; }; f"
     addu = add -u
     addi = add -i
     s = status
@@ -70,13 +71,14 @@
         # - Use as: `git ri {old_commit_hash}` (this is short for
         #   `{old_commit_hash}..HEAD`). Or as: `git ri HEAD~7`.
     rc = "rebase --continue"
-    acan = "!f() { git add . & git can; }; f"
+    acm = "!f() { git add . & git cm \"$1\"; }; f"
         # `add *` doesn't seem to work nice in script. (Typing manually does
         # work though).
-    ag = "!f() { git add . & git cm $1; }; f "
-    go = "!f() { git cm $1 & git push; }; f"
-    ago = "!f() { git add . & git cm $1 & git push; }; f"
-    gud = "!f() { git ago $1; }; f"
+    acan = "!f() { git add . & git can; }; f"
+    ag = "!f() { git add . & git cm \"$1\"; }; f "
+    go = "!f() { git cm \"$1\" & git push; }; f"
+    ago = "!f() { git add . & git cm \"$1\" & git push; }; f"
+    gud = "!f() { git ago \"$1\"; }; f"
     rv = remote -v
     rh = reset HEAD *
         # Unstage all.
