@@ -67,8 +67,8 @@
     sa = stash  # "stash away" or "stash all" or "stash: add"
     sl = stash list
     sp = stash pop
-    d = diff --word-diff=color .
-    ds = diff --staged --word-diff=color .
+    d = "!f() { git diff --word-diff=color ${1:-.}; }; f"
+    ds = "!f() { git diff --staged --word-diff=color ${1:-.}; }; f"
     c = commit
     ca = commit --amend
     can = commit --amend --no-edit
