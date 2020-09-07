@@ -7,18 +7,20 @@
 
 [log]
     date = format:%a %d-%b-%y %H:%M
-        # - Placeholders legend: [https://stackoverflow.com/a/34778736/2611913]
+        # - Legend for these placeholers: [https://stackoverflow.com/a/34778736/2611913]
         # - "date = human" is nice, but only available from git version 2.21
         #    onwards. See here for example outputs:
         #   [https://stackoverflow.com/a/54846195/2611913]
         # - "date = local" is decent (but a bit weird).
         # - This custom format I like the best in the end.
     decorate = short
-        # Print "ref names" (eg: "HEAD -> master, origin/master") besides
+        # Print 'ref names'(eg: "HEAD -> master, origin/master") besides
         # commits that have them.
 
 [format]
     pretty = mycoolfmt
+    # Provide a default value for the `--pretty` (AKA `--format`) argument of eg
+    # `git log`.
 
 [pretty]
     mycoolfmt = format:%C(cyan)%h %C(black bold)%ad %<(54,trunc)%C(white)%s %C(black bold)(%ar)%C(auto)%d
@@ -33,29 +35,36 @@
         # Adapted from [https://stackoverflow.com/a/34778736/2611913]
 
 [alias]
-    # In all these Bash functions, yes, both `;` are necessary.
-    logs = "!f() { git log -n ${1:-10}; }; f"
-        # Bash syntax after `-n`:
-        #   "first argument, or default value of `10` if not given".
-    logb = "!f() { git log -n ${1:-20} --graph --all --date-order; }; f"
+    # In all the following Bash functions, yes, both `;` are necessary.
+    logs = "!f() { git log -n ${1:-7}; }; f"
+        # Meaning of that piece of Bash argument syntax: "insert first argument,
+        # or, if not given, the default value (here: `7`)".
+    logb = "!f() { git log --graph --all $1; }; f"
         # Options:
-        #   --graph         Draw branch history with `| / \ *` characters. Every
-        #                   `*` is a commit. The line colors are confusing (they
-        #                   are random, and not related to the colors of the ref
+        #   --graph         Draw branch history with `|/\` characters. Every `*`
+        #                   is a commit. The line colors are confusing (they are
+        #                   random, and not related to the colors of the ref
         #                   names); so don't mind them.
         #   --all           Do not only show ancestors of HEAD (i.e. current 
         #                   commit), but also from other refs (i.e. other
         #                   branches).
-        #   --date-order    The default, `--topo-order`, avoids showing commits
+        #   --date-order    The default (`--topo-order`) avoids showing commits
         #                   from multiple 'lines of history' intermixed.
-        #                   Here we explicitly ask for that.
+        #                   `--date-order` explicitly shows all historical
+        #                   commits.
+        # Notes:
+        #   - `git log` works on:
+        #       - filenames
+        #       - commit hashes
+        #   - Get a commit's parent by appending `^` (and `^3` for
+        #     great-grandparent).
     ls = "!f() { git logs $1; }; f"
     lb = "!f() { git logb $1; }; f"
     addu = add -u
     addi = add -i
     s = status
     ss = status --short
-    sa = stash  # "stash away" or "stash all"
+    sa = stash  # "stash away" or "stash all" or "stash: add"
     sl = stash list
     sp = stash pop
     d = diff --word-diff=color .
@@ -65,16 +74,20 @@
     can = commit --amend --no-edit
     cm = "!f() { git commit -m \"$1\"; }; f"
     acm = "!f() { git add . & git cm \"$1\"; }; f"
-        # `add *` doesn't seem to work nice in script. (Typing manually does
-        # work though).
+        # - `add *` doesn't seem to work well in script. (It does work nicely
+        #   when typed manually). Hence the `add .`s.
+        # - Yes, the 'double' quoting of the argument is necessary.
     acan = "!f() { git add . & git can; }; f"
     ag = "!f() { git add . & git cm \"$1\"; }; f "
     go = "!f() { git cm \"$1\" & git push; }; f"
     ago = "!f() { git add . & git cm \"$1\" & git push; }; f"
     gud = "!f() { git ago \"$1\"; }; f"
     ri = "!f() { git rebase -i $1; }; f"
-        # - Use as: `git ri {old_commit_hash}` (this is short for
-        #   `{old_commit_hash}..HEAD`). Or as: `git ri HEAD~7`.
+        # Usage:
+        # - git ri {old_commit_hash}
+        #       (This is short for `git ri {old_commit_hash}..HEAD`).
+        # - git ri HEAD~7
+        #       (Short for `git ri HEAD~7..HEAD`).
     rc = "rebase --continue"
     rv = remote -v
     rh = reset HEAD *
