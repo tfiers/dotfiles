@@ -18,12 +18,13 @@
         # commits that have them.
 
 [format]
-    pretty = mycoolfmt
+    pretty = myshort
     # Provide a default value for the `--pretty` (AKA `--format`) argument of eg
     # `git log`.
 
 [pretty]
-    mycoolfmt = format:%C(cyan)%h %C(black bold)%ad %<(54,trunc)%C(white)%s %C(black bold)(%ar)%C(auto)%d
+    myshort = format:%C(cyan)%h %<(60,trunc)%C(white)%s%C(auto)%d
+    dt = format:%C(cyan)%h %C(black bold)%ad %<(54,trunc)%C(white)%s %C(black bold)(%ar)%C(auto)%d
         # Placeholders:
         #   %h   Short hash.
         #   %ad  Authoring date, formatted according to the `log.date` setting.
@@ -33,13 +34,17 @@
         #   %d   Ref names (see `log.decorate`), if present, wrapped in
         #        parentheses and prepended with a space.
         # Adapted from [https://stackoverflow.com/a/34778736/2611913]
+    dtc = format:%C(cyan)%h %<(60,trunc)%C(white)%s%C(auto)%d%n%C(black bold) Created:  %ad%n%C(black bold) Modified: %cd%n
+
+
 
 [alias]
     # In all the following Bash functions, yes, both `;` are necessary.
-    logs = "!f() { git log -n ${1:-7}; }; f"
+    l = "!f() { git log ${1:--n 7}; }; f"
         # Meaning of that piece of Bash argument syntax: "insert first argument,
-        # or, if not given, the default value (here: `7`)".
-    logb = "!f() { git log --graph --all $1; }; f"
+        # or, if not given, the default value (here: `-n 7`)".
+    ld = "!f() { git log --pretty=dt ${1:--n 7}; }; f"
+    lb = "!f() { git log --graph --all --date-order ${1:--n 20}; }; f"  # "log branches"
         # Options:
         #   --graph         Draw branch history with `|/\` characters. Every `*`
         #                   is a commit. The line colors are confusing (they are
@@ -58,8 +63,10 @@
         #       - commit hashes
         #   - Get a commit's parent by appending `^` (and `^3` for
         #     great-grandparent).
-    ls = "!f() { git logs $1; }; f"
-    lb = "!f() { git logb $1; }; f"
+        #   - To see all commits (paged), use
+        #       - `git lb .`
+        #       - `git lb --date-order`
+    lbd = "!f() { git log --pretty=dt --graph --all --date-order ${1:--n 20}; }; f"
     addu = add -u
     addi = add -i
     s = status
