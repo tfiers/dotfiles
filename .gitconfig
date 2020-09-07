@@ -73,14 +73,14 @@
     ca = commit --amend
     can = commit --amend --no-edit
     cm = "!f() { git commit -m \"$1\"; }; f"
-    acm = "!f() { git add . & git cm \"$1\"; }; f"
+    acm = "!f() { git add . ; git cm \"$1\"; }; f"
         # - `add *` doesn't seem to work well in script. (It does work nicely
         #   when typed manually). Hence the `add .`s.
         # - Yes, the 'double' quoting of the argument is necessary.
-    acan = "!f() { git add . & git can; }; f"
-    ag = "!f() { git add . & git cm \"$1\"; }; f "
-    go = "!f() { git cm \"$1\" & git push; }; f"
-    ago = "!f() { git add . & git cm \"$1\" & git push; }; f"
+    acan = "!f() { git add . ; git can; }; f"
+    ag = "!f() { git add . ; git cm \"$1\"; }; f "
+    go = "!f() { git cm \"$1\" ; git push; }; f"
+    ago = "!f() { git add . ; git cm \"$1\" ; git push; }; f"
     gud = "!f() { git ago \"$1\"; }; f"
     ri = "!f() { git rebase -i $1; }; f"
         # Usage:
