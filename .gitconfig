@@ -78,7 +78,6 @@
         #   when typed manually). Hence the `add .`s.
         # - Yes, the 'double' quoting of the argument is necessary.
     acan = "!f() { git add . ; git can; }; f"
-    ag = "!f() { git add . ; git cm \"$1\"; }; f "
     go = "!f() { git cm \"$1\" ; git push; }; f"
     ago = "!f() { git add . ; git cm \"$1\" ; git push; }; f"
     gud = "!f() { git ago \"$1\"; }; f"
