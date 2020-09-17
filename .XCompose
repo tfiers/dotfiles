@@ -1,0 +1,8 @@
+
+# <Multi_key> <g> <a> : "α"
+#
+# See here for more examples: https://github.com/kragen/xcompose/blob/master/dotXCompose
+
+<Multi_key> <p> <r> <e> : "≺"  # precedence; "depends on"
+<Multi_key> <s> <u> <c> : "≻"  # succesion
+<Multi_key> <less> <greater> : "⇔"  # iff
