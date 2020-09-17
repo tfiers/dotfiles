@@ -1,0 +1,5 @@
+# Set default text editor, for git commit messages, eg.
+export VISUAL="vim"
+export EDITOR="$VISUAL"
+
+export TWINE_USERNAME="tfiers"

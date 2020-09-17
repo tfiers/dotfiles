@@ -1,0 +1,3 @@
+[submodule ".bashrc_secrets"]
+	path = .bashrc_secrets
+	url = git@github.com:tfiers/.bashrc_secrets.git
