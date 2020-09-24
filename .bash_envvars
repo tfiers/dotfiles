@@ -4,6 +4,6 @@ export EDITOR="$VISUAL"
 
 export TWINE_USERNAME="tfiers"
 
-; Display desktop through X server
+# Display desktop through X server
 export DISPLAY=:0
 export LIBGL_ALWAYS_INDIRECT=1
