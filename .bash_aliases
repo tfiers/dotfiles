@@ -1,3 +1,4 @@
+alias gp='git p'
 alias gl='git l'
 alias gld='git ld'
 alias glb='git lb'
@@ -23,6 +24,6 @@ alias grh='git rh'
 alias grl='git rl'
 alias grlh='git rlh'
 
-alias nbd="cd /mnt/d/drive/phd/voltage-to-wiring-sim/website"
+alias nbd="cd ~/gdrive/phd/voltage-to-wiring-sim/website"
 
 alias explorer='explorer.exe'

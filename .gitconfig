@@ -39,6 +39,7 @@
 
 
 [alias]
+    p = push
     # In all the following Bash functions, yes, both `;` are necessary.
     l = "!f() { git log ${1:--n 7}; }; f"
         # Meaning of that piece of Bash argument syntax: "insert first argument,
