@@ -24,6 +24,6 @@ alias grh='git rh'
 alias grl='git rl'
 alias grlh='git rlh'
 
-alias nbd="cd ~/gdrive/phd/voltage-to-wiring-sim/website"
+alias nbd="cd ~/OneDrive/phd/voltage-to-wiring-sim/website"
 
 alias explorer='explorer.exe'
