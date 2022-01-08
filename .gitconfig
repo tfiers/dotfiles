@@ -5,6 +5,9 @@
 [pull]
     rebase = true
 
+[github]
+    user = tfiers
+
 [log]
     date = format:%a %d-%b-%y %H:%M
         # - Legend for these placeholers: [https://stackoverflow.com/a/34778736/2611913]
