@@ -10,4 +10,6 @@ OhMyREPL.colorscheme!("OneDark")
 OhMyREPL.enable_autocomplete_brackets(true)
 OhMyREPL.Passes.RainbowBrackets.activate_256colors()
 
+mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
+
 using Revise
