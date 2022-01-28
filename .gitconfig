@@ -102,7 +102,7 @@
     rv = remote -v
     rh = reset HEAD *
         # Unstage all.
-    rl = reset --soft HEAD~1
+    rl = reset --mixed HEAD~1
         # Undo last commit.
         #  (Actual "git revert" command creates a new commit with reversals).
     rlh = reset --hard HEAD~1
