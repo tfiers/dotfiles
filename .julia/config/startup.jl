@@ -1,15 +1,26 @@
 # To avoid the below: `julia --startup-file=no`.
 
 using Pkg
+
 if isfile("Project.toml") || isfile("JuliaProject.toml")
     Pkg.activate(".")
 end
 
-using OhMyREPL
-OhMyREPL.colorscheme!("OneDark")
-OhMyREPL.enable_autocomplete_brackets(true)
-OhMyREPL.Passes.RainbowBrackets.activate_256colors()
+using WhatIsHappening
+
+@withfeedback using Revise
+
+@withfeedback "Setting up OhMyREPL" begin
+    using OhMyREPL
+    OhMyREPL.colorscheme!("OneDark")
+    OhMyREPL.enable_autocomplete_brackets(true)
+    OhMyREPL.Passes.RainbowBrackets.activate_256colors()
+end
+# This is not used when in notebook. No way to know we're in IJulia and thus turn it off
+# selectively, alas (`isdefined(Main, :IJulia)` is not true here). Luckily this is fast.
 
 mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
-
-using Revise
+# Stopgap until these are released:
+# - https://github.com/JuliaLang/julia/pull/38791
+# - https://github.com/julia-vscode/LanguageServer.jl/pull/980
+# - https://github.com/JuliaLang/IJulia.jl/issues/1033 (IJulia support needed; to reopen)
