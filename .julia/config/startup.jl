@@ -1,15 +1,7 @@
-# To avoid the below: `julia --startup-file=no`.
-
-using Pkg
-
-if isfile("Project.toml") || isfile("JuliaProject.toml")
-    Pkg.activate(".")
-end
+# To avoid all the below: `julia --startup-file=no`.
 
 using WhatIsHappening
-
 @withfeedback using Revise
-
 @withfeedback "Setting up OhMyREPL" begin
     using OhMyREPL
     OhMyREPL.colorscheme!("OneDark")
@@ -24,3 +16,8 @@ mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
 # - https://github.com/JuliaLang/julia/pull/38791
 # - https://github.com/julia-vscode/LanguageServer.jl/pull/980
 # - https://github.com/JuliaLang/IJulia.jl/issues/1033 (IJulia support needed; to reopen)
+
+using Pkg
+if isfile("Project.toml")
+    Pkg.activate(".")
+end
