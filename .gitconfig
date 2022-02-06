@@ -26,8 +26,8 @@
     # `git log`.
 
 [pretty]
-    myshort = format:%C(cyan)%h %<(60,trunc)%C(black)%s%C(auto)%d
-    dt = format:%C(cyan)%h %C(black bold)%ad %<(54,trunc)%C(black)%s %C(black bold)(%ar)%C(auto)%d
+        myshort = format:%C(cyan)%h %<(60,trunc)%C(white)%s%C(auto)%d
+        dt = format:%C(cyan)%h %C(black bold)%ad %<(54,trunc)%C(white)%s %C(black bold)(%ar)%C(auto)%d
         # Placeholders:
         #   %h   Short hash.
         #   %ad  Authoring date, formatted according to the `log.date` setting.
@@ -37,7 +37,7 @@
         #   %d   Ref names (see `log.decorate`), if present, wrapped in
         #        parentheses and prepended with a space.
         # Adapted from [https://stackoverflow.com/a/34778736/2611913]
-    dtc = format:%C(cyan)%h %<(60,trunc)%C(black)%s%C(auto)%d%n%C(black bold) Created:  %ad%n%C(black bold) Modified: %cd%n
+        dtc = format:%C(cyan)%h %<(60,trunc)%C(white)%s%C(auto)%d%n%C(black bold) Created:  %ad%n%C(black bold) Modified: %cd%n
 
 
 
