@@ -1,0 +1,14 @@
+#ipython-main-app { position: relative }
+#jupyter-main-app { position: relative }
+/* These were already here */
+
+@font-face {
+	font-family: JuliaMono-Regular;
+	font-style: normal;
+	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-Regular.woff2");
+}
+
+.CodeMirror {
+    font-family: JuliaMono-Regular;
+    font-size: 9.6pt;  /* default: 11pt */
+}
