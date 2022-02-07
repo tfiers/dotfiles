@@ -1,7 +1,9 @@
-# To avoid all the below: `julia --startup-file=no`.
+# To avoid all the below: `julia --startup-file=no`, alias `juliaf`.
 
 using WhatIsHappening
+
 @withfeedback using Revise
+
 @withfeedback "Setting up OhMyREPL" begin
     using OhMyREPL
     OhMyREPL.colorscheme!("OneDark")
@@ -9,7 +11,7 @@ using WhatIsHappening
     OhMyREPL.Passes.RainbowBrackets.activate_256colors()
 end
 # This is not used when in notebook. No way to know we're in IJulia and thus turn it off
-# selectively, alas (`isdefined(Main, :IJulia)` is not true here). Luckily this is fast.
+# selectively, alas (`isdefined(Main, :IJulia)` is not true here). Luckily it is fast.
 
 mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
 # Stopgap until these are released:
@@ -18,6 +20,4 @@ mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
 # - https://github.com/JuliaLang/IJulia.jl/issues/1033 (IJulia support needed; to reopen)
 
 using Pkg
-if isfile("Project.toml")
-    Pkg.activate(".")
-end
+isfile("Project.toml") && Pkg.activate(".")
