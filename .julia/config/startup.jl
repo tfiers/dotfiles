@@ -19,5 +19,7 @@ mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
 # - https://github.com/julia-vscode/LanguageServer.jl/pull/980
 # - https://github.com/JuliaLang/IJulia.jl/issues/1033 (IJulia support needed; to reopen)
 
+ENV["JULIA_EDITOR"] = "code.cmd"  # https://github.com/JuliaLang/julia/pull/44083
+
 using Pkg
 isfile("Project.toml") && Pkg.activate(".")
