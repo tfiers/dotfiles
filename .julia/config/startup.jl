@@ -2,8 +2,6 @@
 
 using WhatIsHappening
 
-@withfeedback using Debugger
-
 @withfeedback "Setting up OhMyREPL" begin
     using OhMyREPL
     OhMyREPL.colorscheme!("OneDark")
