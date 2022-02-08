@@ -1,4 +1,4 @@
-# To avoid all the below: `julia --startup-file=no`, alias `juliaf`.
+# To avoid all the below: `julia --startup-file=no`, alias `jf`.
 
 using WhatIsHappening
 
