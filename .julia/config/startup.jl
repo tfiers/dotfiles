@@ -1,8 +1,9 @@
 # To avoid all the below: `julia --startup-file=no`, alias `juliaf`.
 
 using WhatIsHappening
-@withfeedback using Revise
+
 @withfeedback using Debugger
+
 @withfeedback "Setting up OhMyREPL" begin
     using OhMyREPL
     OhMyREPL.colorscheme!("OneDark")
