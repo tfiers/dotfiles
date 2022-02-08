@@ -1,18 +1,15 @@
 # To avoid all the below: `julia --startup-file=no`, alias `juliaf`.
 
 using WhatIsHappening
-
 @withfeedback using Revise
-
 @withfeedback using Debugger
-
 @withfeedback "Setting up OhMyREPL" begin
     using OhMyREPL
     OhMyREPL.colorscheme!("OneDark")
     OhMyREPL.enable_autocomplete_brackets(true)
     OhMyREPL.Passes.RainbowBrackets.activate_256colors()
 end
-# This is not used when in notebook. No way to know we're in IJulia and thus turn it off
+# OhMyREPL is not used when in notebook. No way to know we're in IJulia and thus turn it off
 # selectively, alas (`isdefined(Main, :IJulia)` is not true here). Luckily it is fast.
 
 mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
