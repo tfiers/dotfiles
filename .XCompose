@@ -14,6 +14,8 @@
 <Multi_key> <less> <period>    : "«"
 <Multi_key> <p> <p>    : "£"
 <Multi_key> <e> <e>    : "€"
+<Multi_key> <c> <m>    : "✔"  # *c*heck *m*ark
+
 
 <Multi_key> <minus> <less> <greater> : ""  # this overrides vanilla "<-" i.e. ←
 
