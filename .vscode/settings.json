@@ -21,5 +21,8 @@
         "IntelGraphicsProfiles": true,
         "Links": true,
         "Application Data": true,
-    }
+    },
+    // Ignore parse errors in `repl_history.jl`.
+    // See https://github.com/julia-vscode/julia-vscode/issues/323#issuecomment-1032522260
+    "julia.lint.run": false,
 }
