@@ -12,3 +12,6 @@
     font-family: JuliaMono-Regular;
     font-size: 9.6pt;  /* default: 11pt */
 }
+
+.run_this_cell { display: none !important }
+/* These 'new' buttons are never used; and they bring code out of alignment with text. */
