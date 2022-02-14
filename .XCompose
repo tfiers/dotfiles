@@ -18,8 +18,7 @@
 <Multi_key> <e> <e>    : "€"
 <Multi_key> <c> <m>    : "✔"  # *c*heck *m*ark
 
-
-<Multi_key> <minus> <less> <greater> : ""  # this overrides vanilla "<-" i.e. ←
+<Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
 
 # https://gist.github.com/carlobaldassi/8951743
 #
