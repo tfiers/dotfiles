@@ -8,6 +8,8 @@
 <Multi_key> <less> <greater> : "⇔"  # iff
 <Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal
 <Multi_key> <bar> <bar> <underscore> : "⫫"  # conditional independence
+<Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop
+
 <Multi_key> <greater> <greater> : "→"  # this overrides "»"
 <Multi_key> <less> <less>       : "←"
 <Multi_key> <greater> <period> : "»"
