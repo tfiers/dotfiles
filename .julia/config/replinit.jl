@@ -1,4 +1,5 @@
-using WhatIsHappening  # loads blazing fast
+
+using WhatIsHappening  # Loads fast, i.e. no startup time impact.
 
 @withfeedback "Setting up OhMyREPL" begin
     using OhMyREPL
