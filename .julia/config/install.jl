@@ -1,10 +1,9 @@
 
 using Pkg
 
-# We cannot record the following in Project.toml nor in Manifest.toml (`pkg> dev <url>`
-# places a `path` (which is machine-specific) in the Manifest -- not the url. Using `pkg>
-# add <url>` does record the url; but then we can't hack on pkg locally).
-unregistered_dev_pkgs = Dict(
+# We cannot record the following in Project.toml. And I don't want to commit Manifest.toml
+# in my dotfiles repo; no need to record every update of every dependency here methinks.
+unregistered_packages = Dict(
     "WhatIsHappening"  => "https://github.com/tfiers/WhatIsHappening.jl",
     "Sciplotlib"       => "https://github.com/tfiers/Sciplotlib.jl",
     "MyToolbox"        => "https://github.com/tfiers/MyToolbox.jl",
@@ -12,14 +11,14 @@ unregistered_dev_pkgs = Dict(
 
 # The following is a fix: temporarily remove dev packages from `Project.toml`, to avoid
 # "LoadError: expected package {devpkg} to be registered".
-for pkgname in keys(unregistered_dev_pkgs)
+for pkgname in keys(unregistered_packages)
     try Pkg.rm(pkgname)
-    catch # The dependency is already removed from `Project.toml`.
+    catch # The dependency is already removed from or not yet in `Project.toml`.
     end
 end
 
-for url in values(unregistered_dev_pkgs)
-    Pkg.develop(; url)
+for url in values(unregistered_packages)
+    Pkg.add(; url)
 end
 
 # Install all from `~/.julia/environments/vX.Y/Project.toml`.
