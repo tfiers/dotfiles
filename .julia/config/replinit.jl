@@ -16,5 +16,7 @@ mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
 
 ENV["JULIA_EDITOR"] = "code.cmd"  # https://github.com/JuliaLang/julia/pull/44083
 
+macro RD() :( using Revise, Debugger ) end
+
 using Pkg
 isfile("Project.toml") && Pkg.activate(".")
