@@ -4,3 +4,4 @@
 alias j="julia"
 alias e="explorer ."
 alias c="code ."
+alias ll="ls -la"
