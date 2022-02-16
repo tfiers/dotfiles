@@ -2,11 +2,14 @@
 	email = tomas.fiers@gmail.com
 	name = Tomas Fiers
 
+[github]
+    user = tfiers
+
 [pull]
     rebase = true
 
-[github]
-    user = tfiers
+[submodule]
+    recurse = true
 
 [log]
     date = format:%a %d-%b-%y %H:%M
