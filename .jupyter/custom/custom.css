@@ -17,7 +17,7 @@
 
 /* Visually associate text cells with the code cell just below them */
 .text_cell_render {
-    padding-bottom: 0 !important;
+    padding-bottom: 0 !important;  /* default: 0.5em */
 }
 .code_cell {
     margin-bottom: 0.8em !important;
@@ -30,4 +30,9 @@ h1, h2, h3, h4 {
 /* Fix ridiculously wide and unreadable paragraphs */
 p {
     max-width: 5in;  /* ~75 chars */
+}
+
+/* Associate bullet list with the text above */
+ul {
+    margin-top: 0 !important;
 }
