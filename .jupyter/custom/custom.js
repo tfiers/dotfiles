@@ -1,5 +1,8 @@
 
-window.setTimeout(on_init, 500)
+window.onload = function() {
+    change_tree_sort_order()
+    hide_header()
+}
 // Note: using `$([IPython.events]).on(x, function() {…})` with x =
 // "notebook_loaded.Notebook" or "app_initialized.DashboardApp" (all such events:
 // https://docs.jupyter.org/en/latest/contributing/ipython-dev-guide/js_events.html)
@@ -7,11 +10,6 @@ window.setTimeout(on_init, 500)
 // `define(['base/js/namespace', 'base/js/events', 'base/js/promises',], function (IPython, events, promises) { … })`
 // and `events.on(` or `promises.app_initialized` (from https://github.com/jupyter/notebook/blob/master/notebook/static/custom/custom.js),
 // but no dice, very weirdly.
-
-function on_init() {
-    change_tree_sort_order()
-    hide_header()
-}
 
 // Sort notebooks by name *descending* by default.
 // When using ISO-8601-date-prefixed filenames, the newest are then on top.
@@ -25,12 +23,12 @@ function hide_header() {
     // (Invocation found via looking in the hide-header nbextension src, and exploring the `Jupyter` obj in devtools console).
 }
 
-
-// More usefulness:
-//
-// - To find config and extension dirs: `jupyter --paths`
-//   Extensions are for me eg in C:\ProgramData\jupyter\nbextensions
-//
-// - Extension dev guide:
-//   https://jupyter-notebook.readthedocs.io/en/stable/extending/frontend_extensions.html
-//
+/*
+ *   More usefulness:
+ *
+ *   - To find config and extension dirs: `jupyter --paths`
+ *     Extensions are for me eg in C:\ProgramData\jupyter\nbextensions
+ *
+ *   - Extension dev guide:
+ *     https://jupyter-notebook.readthedocs.io/en/stable/extending/frontend_extensions.html
+ */

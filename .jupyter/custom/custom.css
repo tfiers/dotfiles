@@ -17,12 +17,14 @@
 
 /* Visually associate text cells with the code cell just below them */
 .text_cell_render {
-    padding-bottom: 0 !important;   /* default: 0.5 em */
-    padding-top: 0.8em !important;  /* default: 0.5 em */
+    padding-bottom: 0 !important;
 }
-/* Restore bottom-pad for headings */
+.code_cell {
+    margin-bottom: 0.8em !important;
+}
+/* Restore some bottom padding for headers */
 h1, h2, h3, h4 {
-    padding-bottom: 0.5em;
+    padding-bottom: 0.4em !important;
 }
 
 /* Fix ridiculously wide and unreadable paragraphs */
