@@ -1,17 +1,31 @@
+/* These were already here */
 #ipython-main-app { position: relative }
 #jupyter-main-app { position: relative }
-/* These were already here */
 
 @font-face {
 	font-family: JuliaMono-Regular;
 	font-style: normal;
 	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-Regular.woff2");
 }
-
 .CodeMirror {
     font-family: JuliaMono-Regular;
     font-size: 9.6pt;  /* default: 11pt */
 }
 
+/* I never use these ~new "Run" buttons; and they bring code out of alignment with text. */
 .run_this_cell { display: none !important }
-/* These 'new' buttons are never used; and they bring code out of alignment with text. */
+
+/* Visually associate text cells with the code cell just below them */
+.text_cell_render {
+    padding-bottom: 0 !important;   /* default: 0.5 em */
+    padding-top: 0.8em !important;  /* default: 0.5 em */
+}
+/* Restore bottom-pad for headings */
+h1, h2, h3, h4 {
+    padding-bottom: 0.5em;
+}
+
+/* Fix ridiculously wide and unreadable paragraphs */
+p {
+    max-width: 5in;  /* ~75 chars */
+}
