@@ -11,6 +11,9 @@
 [submodule]
     recurse = true
 
+[push]
+    recurseSubmodules = on-demand
+
 [log]
     date = format:%a %d-%b-%y %H:%M
         # - Legend for these placeholers: [https://stackoverflow.com/a/34778736/2611913]
@@ -41,8 +44,6 @@
         #        parentheses and prepended with a space.
         # Adapted from [https://stackoverflow.com/a/34778736/2611913]
         dtc = format:%C(cyan)%h %<(60,trunc)%C(white)%s%C(auto)%d%n%C(black bold) Created:  %ad%n%C(black bold) Modified: %cd%n
-
-
 
 [alias]
     p = push
