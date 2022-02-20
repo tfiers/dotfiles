@@ -1,14 +1,17 @@
 
-# <Multi_key> <g> <a> : "α"
+# See here for more syntax examples: https://github.com/kragen/xcompose/blob/master/dotXCompose
 #
-# See here for more examples: https://github.com/kragen/xcompose/blob/master/dotXCompose
+# On Windows, reload by right clicking WinCompose tray icon > Show Sequences > Reload
+#
+# The non-DRY comments ("Greek letter …") are for searchability in WinCompose.
+#
 
 <Multi_key> <p> <r> <e> : "≺"  # precedence; "depends on"
 <Multi_key> <s> <u> <c> : "≻"  # succesion
-<Multi_key> <less> <greater> : "⇔"  # iff
-<Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal
+<Multi_key> <less> <greater> : "⇔"  # iff (als en slechts als, if and only if)
+<Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal, loodrecht
 <Multi_key> <bar> <bar> <underscore> : "⫫"  # conditional independence
-<Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop
+<Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop. (∃ is EE)
 
 <Multi_key> <greater> <greater> : "→"  # this overrides "»"
 <Multi_key> <less> <less>       : "←"
@@ -16,110 +19,162 @@
 <Multi_key> <less> <period>    : "«"
 <Multi_key> <p> <p>    : "£"
 <Multi_key> <e> <e>    : "€"
-<Multi_key> <c> <m>    : "✔"  # *c*heck *m*ark
+<Multi_key> <c> <m>    : "✔"  # 𝐜heck 𝐦ark
 
 <Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
 
+# [Win-. doesn't have flag emojis (to not offend China etc I guess). Hence these]
+# `fl`, `fi`, `ff`, `fs` are ligatures (ﬂ ﬁ ﬀ ﬁ). `vn` is hacek (ň).
+# Hence `V` (vlag, vaandel).
+# For 2-character ASCII ISO codes + emoji: https://apps.timwhitlock.info/emoji/tables/iso3166
+#
+<Multi_key> <V> <e> <u> : "🇪🇺"    # Flag: European Union
+<Multi_key> <V> <b> <e> : "🇧🇪"    # Flag: Belgium
+<Multi_key> <V> <n> <l> : "🇳🇱"    # Flag: Netherlands
+<Multi_key> <V> <f> <r> : "🇫🇷"    # Flag: France
+<Multi_key> <V> <d> <e> : "🇩🇪"    # Flag: Germany
+<Multi_key> <V> <u> <k> : "🇬🇧"    # Flag: United Kingdom (Great Britain)
+<Multi_key> <V> <i> <e> : "🇮🇪"    # Flag: Ireland
+<Multi_key> <V> <w> <a> : "🏴󠁧󠁢󠁷󠁬󠁳󠁿"    # Flag: Wales (supported on Twitter, Android, …)
+<Multi_key> <V> <s> <c> : "🏴󠁧󠁢󠁳󠁣󠁴󠁿"    # Flag: Scotland (idem)
+<Multi_key> <V> <e> <s> : "🇪🇸"    # Flag: Spain
+<Multi_key> <V> <p> <t> : "🇵🇹"    # Flag: Portugal
+<Multi_key> <V> <a> <t> : "🇦🇹"    # Flag: Austria
+<Multi_key> <V> <s> <w> : "🇨🇭"    # Flag: Switzerland
+<Multi_key> <V> <i> <t> : "🇮🇹"    # Flag: Italy
+<Multi_key> <V> <v> <a> : "🇻🇦"    # Flag: Vatican City
+<Multi_key> <V> <g> <r> : "🇬🇷"    # Flag: Greece
+<Multi_key> <V> <h> <u> : "🇭🇺"    # Flag: Hungary
+<Multi_key> <V> <c> <z> : "🇨🇿"    # Flag: Czech Republic
+<Multi_key> <V> <p> <l> : "🇵🇱"    # Flag: Poland
+<Multi_key> <V> <u> <a> : "🇺🇦"    # Flag: Ukraine
+<Multi_key> <V> <s> <e> : "🇸🇪"    # Flag: Sweden
+<Multi_key> <V> <d> <k> : "🇩🇰"    # Flag: Denmark
+<Multi_key> <V> <n> <o> : "🇳🇴"    # Flag: Norway
+<Multi_key> <V> <f> <i> : "🇫🇮"    # Flag: Finland
+<Multi_key> <V> <i> <s> : "🇮🇸"    # Flag: Iceland
+<Multi_key> <V> <u> <s> : "🇺🇸"    # Flag: United States
+<Multi_key> <V> <c> <a> : "🇨🇦"    # Flag: Canada
+<Multi_key> <V> <v> <e> : "🇻🇪"    # Flag: Venezuela
+<Multi_key> <V> <b> <r> : "🇧🇷"    # Flag: Brazil
+<Multi_key> <V> <j> <m> : "🇯🇲"    # Flag: Jamaica
+<Multi_key> <V> <t> <r> : "🇹🇷"    # Flag: Turkey
+<Multi_key> <V> <p> <a> : "🇵🇸"    # Flag: Palestine
+<Multi_key> <V> <e> <g> : "🇪🇬"    # Flag: Egypt
+<Multi_key> <V> <m> <a> : "🇲🇦"    # Flag: Morocco
+<Multi_key> <V> <z> <a> : "🇿🇦"    # Flag: South Africa
+<Multi_key> <V> <i> <n> : "🇮🇳"    # Flag: India
+<Multi_key> <V> <n> <p> : "🇳🇵"    # Flag: Nepal
+<Multi_key> <V> <c> <n> : "🇨🇳"    # Flag: China
+<Multi_key> <V> <t> <w> : "🇹🇼"    # Flag: Taiwan
+<Multi_key> <V> <s> <g> : "🇸🇬"    # Flag: Singapore
+<Multi_key> <V> <n> <k> : "🇰🇵"    # Flag: North Korea
+<Multi_key> <V> <s> <k> : "🇰🇷"    # Flag: South Korea
+<Multi_key> <V> <j> <p> : "🇯🇵"    # Flag: Japan
+<Multi_key> <V> <a> <u> : "🇦🇺"    # Flag: Australia
+<Multi_key> <V> <a> <n> : "🇦🇶"    # Flag: Antarctica
+
+
 # https://gist.github.com/carlobaldassi/8951743
 #
-<Multi_key> <space> <a>    : "α"     U03B1    # alpha
-<Multi_key> <a> <space>    : "α"     U03B1    # alpha
-<Multi_key> <space> <b>    : "β"     U03B2    # beta
-<Multi_key> <b> <space>    : "β"     U03B2    # beta
-<Multi_key> <space> <c>    : "ξ"     U03BE    # xi
-<Multi_key> <c> <space>    : "ξ"     U03BE    # xi
-<Multi_key> <space> <d>    : "δ"     U03B4    # delta
-<Multi_key> <d> <space>    : "δ"     U03B4    # delta
-<Multi_key> <space> <e>    : "ε"     U03B5    # epsilon
-<Multi_key> <e> <space>    : "ε"     U03B5    # epsilon
-<Multi_key> <space> <f>    : "φ"     U03C6    # phi
-<Multi_key> <f> <space>    : "φ"     U03C6    # phi
-<Multi_key> <space> <g>    : "γ"     U03B3    # gamma
-<Multi_key> <g> <space>    : "γ"     U03B3    # gamma
-<Multi_key> <space> <h>    : "θ"     U03B8    # theta
-<Multi_key> <h> <space>    : "θ"     U03B8    # theta
-<Multi_key> <space> <i>    : "ι"     U03B9    # iota
-<Multi_key> <i> <space>    : "ι"     U03B9    # iota
-<Multi_key> <space> <k>    : "κ"     U03BA    # kappa
-<Multi_key> <k> <space>    : "κ"     U03BA    # kappa
-<Multi_key> <space> <l>    : "λ"     U03BB    # lambda
-<Multi_key> <l> <space>    : "λ"     U03BB    # lambda
-<Multi_key> <space> <m>    : "μ"     U03BC    # mu
-<Multi_key> <m> <space>    : "μ"     U03BC    # mu
-<Multi_key> <space> <n>    : "ν"     U03BD    # nu
-<Multi_key> <n> <space>    : "ν"     U03BD    # nu
-<Multi_key> <space> <o>    : "ο"     U03BF    # omicron
-<Multi_key> <o> <space>    : "ο"     U03BF    # omicron
-<Multi_key> <space> <p>    : "π"     U03C0    # pi
-<Multi_key> <p> <space>    : "π"     U03C0    # pi
-<Multi_key> <space> <q>    : "ψ"     U03C8    # psi
-<Multi_key> <q> <space>    : "ψ"     U03C8    # psi
-<Multi_key> <space> <r>    : "ρ"     U03C1    # rho
-<Multi_key> <r> <space>    : "ρ"     U03C1    # rho
-<Multi_key> <space> <s>    : "σ"     U03C3    # sigma
-<Multi_key> <s> <space>    : "σ"     U03C3    # sigma
-<Multi_key> <space> <t>    : "τ"     U03C4    # tau
-<Multi_key> <t> <space>    : "τ"     U03C4    # tau
-<Multi_key> <space> <u>    : "υ"     U03C5    # upsilon
-<Multi_key> <u> <space>    : "υ"     U03C5    # upsilon
-<Multi_key> <space> <v>    : "ς"     U03C2    # final sigma
-<Multi_key> <v> <space>    : "ς"     U03C2    # final sigma
-<Multi_key> <space> <w>    : "ω"     U03C9    # omega
-<Multi_key> <w> <space>    : "ω"     U03C9    # omega
-<Multi_key> <space> <x>    : "χ"     U03C7    # chi
-<Multi_key> <x> <space>    : "χ"     U03C7    # chi
-<Multi_key> <space> <y>    : "η"     U03B7    # eta
-<Multi_key> <y> <space>    : "η"     U03B7    # eta
-<Multi_key> <space> <z>    : "ζ"     U03B6    # zeta
-<Multi_key> <z> <space>    : "ζ"     U03B6    # zeta
+<Multi_key> <space> <a>    : "α"     U03B1    # Greek letter alpha
+<Multi_key> <a> <space>    : "α"     U03B1    # Greek letter alpha
+<Multi_key> <space> <b>    : "β"     U03B2    # Greek letter beta
+<Multi_key> <b> <space>    : "β"     U03B2    # Greek letter beta
+<Multi_key> <space> <c>    : "ξ"     U03BE    # Greek letter xi
+<Multi_key> <c> <space>    : "ξ"     U03BE    # Greek letter xi
+<Multi_key> <space> <d>    : "δ"     U03B4    # Greek letter delta
+<Multi_key> <d> <space>    : "δ"     U03B4    # Greek letter delta
+<Multi_key> <space> <e>    : "ε"     U03B5    # Greek letter epsilon
+<Multi_key> <e> <space>    : "ε"     U03B5    # Greek letter epsilon
+<Multi_key> <space> <f>    : "φ"     U03C6    # Greek letter phi
+<Multi_key> <f> <space>    : "φ"     U03C6    # Greek letter phi
+<Multi_key> <space> <g>    : "γ"     U03B3    # Greek letter gamma
+<Multi_key> <g> <space>    : "γ"     U03B3    # Greek letter gamma
+<Multi_key> <space> <h>    : "θ"     U03B8    # Greek letter theta
+<Multi_key> <h> <space>    : "θ"     U03B8    # Greek letter theta
+<Multi_key> <space> <i>    : "ι"     U03B9    # Greek letter iota
+<Multi_key> <i> <space>    : "ι"     U03B9    # Greek letter iota
+<Multi_key> <space> <k>    : "κ"     U03BA    # Greek letter kappa
+<Multi_key> <k> <space>    : "κ"     U03BA    # Greek letter kappa
+<Multi_key> <space> <l>    : "λ"     U03BB    # Greek letter lambda
+<Multi_key> <l> <space>    : "λ"     U03BB    # Greek letter lambda
+<Multi_key> <space> <m>    : "μ"     U03BC    # Greek letter mu
+<Multi_key> <m> <space>    : "μ"     U03BC    # Greek letter mu
+<Multi_key> <space> <n>    : "ν"     U03BD    # Greek letter nu
+<Multi_key> <n> <space>    : "ν"     U03BD    # Greek letter nu
+<Multi_key> <space> <o>    : "ο"     U03BF    # Greek letter omicron
+<Multi_key> <o> <space>    : "ο"     U03BF    # Greek letter omicron
+<Multi_key> <space> <p>    : "π"     U03C0    # Greek letter pi
+<Multi_key> <p> <space>    : "π"     U03C0    # Greek letter pi
+<Multi_key> <space> <q>    : "ψ"     U03C8    # Greek letter psi
+<Multi_key> <q> <space>    : "ψ"     U03C8    # Greek letter psi
+<Multi_key> <space> <r>    : "ρ"     U03C1    # Greek letter rho
+<Multi_key> <r> <space>    : "ρ"     U03C1    # Greek letter rho
+<Multi_key> <space> <s>    : "σ"     U03C3    # Greek letter sigma
+<Multi_key> <s> <space>    : "σ"     U03C3    # Greek letter sigma
+<Multi_key> <space> <t>    : "τ"     U03C4    # Greek letter tau
+<Multi_key> <t> <space>    : "τ"     U03C4    # Greek letter tau
+<Multi_key> <space> <u>    : "υ"     U03C5    # Greek letter upsilon
+<Multi_key> <u> <space>    : "υ"     U03C5    # Greek letter upsilon
+<Multi_key> <space> <v>    : "ς"     U03C2    # Greek letter final sigma
+<Multi_key> <v> <space>    : "ς"     U03C2    # Greek letter final sigma
+<Multi_key> <space> <w>    : "ω"     U03C9    # Greek letter omega
+<Multi_key> <w> <space>    : "ω"     U03C9    # Greek letter omega
+<Multi_key> <space> <x>    : "χ"     U03C7    # Greek letter chi
+<Multi_key> <x> <space>    : "χ"     U03C7    # Greek letter chi
+<Multi_key> <space> <y>    : "η"     U03B7    # Greek letter eta
+<Multi_key> <y> <space>    : "η"     U03B7    # Greek letter eta
+<Multi_key> <space> <z>    : "ζ"     U03B6    # Greek letter zeta
+<Multi_key> <z> <space>    : "ζ"     U03B6    # Greek letter zeta
 
-<Multi_key> <space> <A>    : "Α"     U0391    # ALPHA
-<Multi_key> <A> <space>    : "Α"     U0391    # ALPHA
-<Multi_key> <space> <B>    : "Β"     U0392    # BETA
-<Multi_key> <B> <space>    : "Β"     U0392    # BETA
-<Multi_key> <space> <C>    : "Ξ"     U039E    # XI
-<Multi_key> <C> <space>    : "Ξ"     U039E    # XI
-<Multi_key> <space> <D>    : "Δ"     U0394    # DELTA
-<Multi_key> <D> <space>    : "Δ"     U0394    # DELTA
-<Multi_key> <space> <E>    : "Ε"     U0395    # EPSILON
-<Multi_key> <E> <space>    : "Ε"     U0395    # EPSILON
-<Multi_key> <space> <F>    : "Φ"     U03A6    # PHI
-<Multi_key> <F> <space>    : "Φ"     U03A6    # PHI
-<Multi_key> <space> <G>    : "Γ"     U0393    # GAMMA
-<Multi_key> <G> <space>    : "Γ"     U0393    # GAMMA
-<Multi_key> <space> <H>    : "Θ"     U0398    # THETA
-<Multi_key> <H> <space>    : "Θ"     U0398    # THETA
-<Multi_key> <space> <I>    : "Ι"     U0399    # IOTA
-<Multi_key> <I> <space>    : "Ι"     U0399    # IOTA
-<Multi_key> <space> <K>    : "Κ"     U039A    # KAPPA
-<Multi_key> <K> <space>    : "Κ"     U039A    # KAPPA
-<Multi_key> <space> <L>    : "Λ"     U039B    # LAMBDA
-<Multi_key> <L> <space>    : "Λ"     U039B    # LAMBDA
-<Multi_key> <space> <M>    : "Μ"     U039C    # MU
-<Multi_key> <M> <space>    : "Μ"     U039C    # MU
-<Multi_key> <space> <N>    : "Ν"     U039D    # NU
-<Multi_key> <N> <space>    : "Ν"     U039D    # NU
-<Multi_key> <space> <O>    : "Ο"     U039F    # OMICRON
-<Multi_key> <O> <space>    : "Ο"     U039F    # OMICRON
-<Multi_key> <space> <P>    : "Π"     U03A0    # PI
-<Multi_key> <P> <space>    : "Π"     U03A0    # PI
-<Multi_key> <space> <Q>    : "Ψ"     U03A8    # PSI
-<Multi_key> <Q> <space>    : "Ψ"     U03A8    # PSI
-<Multi_key> <space> <R>    : "Ρ"     U03A1    # RHO
-<Multi_key> <R> <space>    : "Ρ"     U03A1    # RHO
-<Multi_key> <space> <S>    : "Σ"     U03A3    # SIGMA
-<Multi_key> <S> <space>    : "Σ"     U03A3    # SIGMA
-<Multi_key> <space> <T>    : "Τ"     U03A4    # TAU
-<Multi_key> <T> <space>    : "Τ"     U03A4    # TAU
-<Multi_key> <space> <U>    : "Υ"     U03A5    # UPSILON
-<Multi_key> <U> <space>    : "Υ"     U03A5    # UPSILON
-<Multi_key> <space> <V>    : "Σ"     U03A3    # SIGMA
-<Multi_key> <V> <space>    : "Σ"     U03A3    # SIGMA
-<Multi_key> <space> <W>    : "Ω"     U03A9    # OMEGA
-<Multi_key> <W> <space>    : "Ω"     U03A9    # OMEGA
-<Multi_key> <space> <X>    : "Χ"     U03A7    # CHI
-<Multi_key> <X> <space>    : "Χ"     U03A7    # CHI
-<Multi_key> <space> <Y>    : "Η"     U0397    # ETA
-<Multi_key> <Y> <space>    : "Η"     U0397    # ETA
-<Multi_key> <space> <Z>    : "Ζ"     U0396    # ZETA
-<Multi_key> <Z> <space>    : "Ζ"     U0396    # ZETA
+<Multi_key> <space> <A>    : "Α"     U0391    # Greek letter ALPHA
+<Multi_key> <A> <space>    : "Α"     U0391    # Greek letter ALPHA
+<Multi_key> <space> <B>    : "Β"     U0392    # Greek letter BETA
+<Multi_key> <B> <space>    : "Β"     U0392    # Greek letter BETA
+<Multi_key> <space> <C>    : "Ξ"     U039E    # Greek letter XI
+<Multi_key> <C> <space>    : "Ξ"     U039E    # Greek letter XI
+<Multi_key> <space> <D>    : "Δ"     U0394    # Greek letter DELTA
+<Multi_key> <D> <space>    : "Δ"     U0394    # Greek letter DELTA
+<Multi_key> <space> <E>    : "Ε"     U0395    # Greek letter EPSILON
+<Multi_key> <E> <space>    : "Ε"     U0395    # Greek letter EPSILON
+<Multi_key> <space> <F>    : "Φ"     U03A6    # Greek letter PHI
+<Multi_key> <F> <space>    : "Φ"     U03A6    # Greek letter PHI
+<Multi_key> <space> <G>    : "Γ"     U0393    # Greek letter GAMMA
+<Multi_key> <G> <space>    : "Γ"     U0393    # Greek letter GAMMA
+<Multi_key> <space> <H>    : "Θ"     U0398    # Greek letter THETA
+<Multi_key> <H> <space>    : "Θ"     U0398    # Greek letter THETA
+<Multi_key> <space> <I>    : "Ι"     U0399    # Greek letter IOTA
+<Multi_key> <I> <space>    : "Ι"     U0399    # Greek letter IOTA
+<Multi_key> <space> <K>    : "Κ"     U039A    # Greek letter KAPPA
+<Multi_key> <K> <space>    : "Κ"     U039A    # Greek letter KAPPA
+<Multi_key> <space> <L>    : "Λ"     U039B    # Greek letter LAMBDA
+<Multi_key> <L> <space>    : "Λ"     U039B    # Greek letter LAMBDA
+<Multi_key> <space> <M>    : "Μ"     U039C    # Greek letter MU
+<Multi_key> <M> <space>    : "Μ"     U039C    # Greek letter MU
+<Multi_key> <space> <N>    : "Ν"     U039D    # Greek letter NU
+<Multi_key> <N> <space>    : "Ν"     U039D    # Greek letter NU
+<Multi_key> <space> <O>    : "Ο"     U039F    # Greek letter OMICRON
+<Multi_key> <O> <space>    : "Ο"     U039F    # Greek letter OMICRON
+<Multi_key> <space> <P>    : "Π"     U03A0    # Greek letter PI
+<Multi_key> <P> <space>    : "Π"     U03A0    # Greek letter PI
+<Multi_key> <space> <Q>    : "Ψ"     U03A8    # Greek letter PSI
+<Multi_key> <Q> <space>    : "Ψ"     U03A8    # Greek letter PSI
+<Multi_key> <space> <R>    : "Ρ"     U03A1    # Greek letter RHO
+<Multi_key> <R> <space>    : "Ρ"     U03A1    # Greek letter RHO
+<Multi_key> <space> <S>    : "Σ"     U03A3    # Greek letter SIGMA
+<Multi_key> <S> <space>    : "Σ"     U03A3    # Greek letter SIGMA
+<Multi_key> <space> <T>    : "Τ"     U03A4    # Greek letter TAU
+<Multi_key> <T> <space>    : "Τ"     U03A4    # Greek letter TAU
+<Multi_key> <space> <U>    : "Υ"     U03A5    # Greek letter UPSILON
+<Multi_key> <U> <space>    : "Υ"     U03A5    # Greek letter UPSILON
+<Multi_key> <space> <V>    : "Σ"     U03A3    # Greek letter SIGMA
+<Multi_key> <V> <space>    : "Σ"     U03A3    # Greek letter SIGMA
+<Multi_key> <space> <W>    : "Ω"     U03A9    # Greek letter OMEGA
+<Multi_key> <W> <space>    : "Ω"     U03A9    # Greek letter OMEGA
+<Multi_key> <space> <X>    : "Χ"     U03A7    # Greek letter CHI
+<Multi_key> <X> <space>    : "Χ"     U03A7    # Greek letter CHI
+<Multi_key> <space> <Y>    : "Η"     U0397    # Greek letter ETA
+<Multi_key> <Y> <space>    : "Η"     U0397    # Greek letter ETA
+<Multi_key> <space> <Z>    : "Ζ"     U0396    # Greek letter ZETA
+<Multi_key> <Z> <space>    : "Ζ"     U0396    # Greek letter ZETA
