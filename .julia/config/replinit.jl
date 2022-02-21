@@ -16,9 +16,9 @@ mwt(obj; supertypes = true) = methodswith(typeof(obj); supertypes)
 
 ENV["JULIA_EDITOR"] = "code.cmd"  # https://github.com/JuliaLang/julia/pull/44083
 
-macro R()  :( using Revise ) end
-macro D()  :( using Debugger ) end
-macro RD() :( using Revise, Debugger ) end
+macro denter(expr)
+    :( using Debugger; @enter $(expr) )
+end
 
 using Pkg
 isfile("Project.toml") && Pkg.activate(".")
