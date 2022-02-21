@@ -1,7 +1,7 @@
 
 window.onload = function() {
-    change_tree_sort_order()
-    window.setTimeout(hide_header, 500)
+    window.setTimeout(change_tree_sort_order, 400)
+    window.setTimeout(hide_header, 800)
 }
 // Note: using `$([IPython.events]).on(x, function() {…})` with x =
 // "notebook_loaded.Notebook" or "app_initialized.DashboardApp" (all such events:
