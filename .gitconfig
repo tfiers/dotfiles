@@ -79,6 +79,7 @@
     addi = add -i
     s = status
     ss = status --short
+    sms = submodule status
     sa = stash  # "stash away" or "stash all" or "stash: add"
     sl = stash list
     sp = stash pop
