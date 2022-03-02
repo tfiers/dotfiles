@@ -1,29 +1,26 @@
+
 print(f"Running {__file__}")
 
-# If the last expression of a code cell is eg `product = 3 * 7`, and the cell is run,
-# IPython prints nothing, by default. Here, we make it print the result (`21`).
-# This avoids having to type an extra line with just `product` to see the result.
-# Prints can still be suppressed by ending the line with `;`.
+# If the last executed expression was an assignment, print the assigned value, instead
+# of nothing. This obviates the need to retype the variable name, as in `myprod=3*7;
+# myprod`. Output prints can still be suppressed by ending the line with `;`.
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "last_expr_or_assign"
 
 # If you get 'black' autoformatting (https://github.com/ipython/ipython/pull/13464),
-# upgrade IPython: it's disabled again in 8.1. `conda` might not have it yet, so
-# use `pip install -U ipython`.
+# upgrade IPython (it's disabled again in 8.1): open an elevated prompt, run `condini`
+# (to activate base; see `~/.bashrc`), and run `pip install -U ipython`.
 
-# Import standard lib namespaces; and import some utility functions directly.
+import sys, os, re, shutil, pathlib, math, random, \
+       itertools, functools, collections, datetime    # (Using braces not allowed here).
 #
-existing_names = dir() + ["existing_names"]
-#
-import sys, os, shutil, re, itertools, pdb, math, random, datetime
-import functools, pathlib, collections
-from functools import partial
-from pathlib import Path
 from time import time
-# from collections import defaultdict  # not necessary since 3.7: use plain `dict`.
+from pathlib import Path
+from functools import partial
+from collections import defaultdict
 #
-new_names = [n for n in dir() if n not in set(existing_names)]
-    # We don't use set subtraction, as that doesn't preserve order; and python has no
-    # OrderedSet. We do use set for fast
+# `OrderedDict` is not necessary anymore since Python 3.7: iterating over a plain `dict`
+# is now guaranteed to yield items in insertion order. Differences between the two:
+# https://realpython.com/python-ordereddict/#selecting-the-right-dictionary-for-the-job
 #
-print("Imported:", ", ".join(new_names))
+print("Imported some stdlib functions and namespaces.")

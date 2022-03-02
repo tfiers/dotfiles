@@ -7,6 +7,7 @@ alias c="code ."
 alias ll="ls -la"
 alias cl="clear"
 alias jup="jupyter notebook"
+alias ip="ipython"
 alias condini="install_conda_in_bash"  # "conda init"
 
 # Configure bash to be able to use `conda activate {envname}` etc.
