@@ -12,6 +12,8 @@
 <Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal, loodrecht
 <Multi_key> <bar> <bar> <underscore> : "⫫"  # conditional independence
 <Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop. (∃ is EE)
+<Multi_key> <n> <e> : "∉"  # "not element of"
+    # We cannot use `nin`, as `ni` is already `∋`. Nor `!in`, as `!` is "dot below": ị.
 
 <Multi_key> <greater> <greater> : "→"  # this overrides "»"
 <Multi_key> <less> <less>       : "←"
