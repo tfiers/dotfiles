@@ -8,10 +8,10 @@ alias ll="ls -la"
 alias cl="clear"
 alias jup="jupyter notebook"
 alias ip="ipython"
-alias condini="install_conda_in_bash"  # "conda init"
+alias condini="configure_bash_for_conda"  # "conda init"
 
 # Configure bash to be able to use `conda activate {envname}` etc.
 # We don't do this by default (i.e. run this here in `.bashrc`), as it's slow.
-install_conda_in_bash() {
+configure_bash_for_conda() {
     eval "$('conda' 'shell.bash' 'hook')"
 }
