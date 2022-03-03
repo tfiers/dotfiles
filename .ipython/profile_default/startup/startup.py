@@ -1,5 +1,20 @@
 
-print(f"Running {__file__}")
+_startup_log = []
+
+def _log(*msgs):
+    print(*msgs)
+    _startup_log.append(msgs)  # not `extend`; i.e. we create a nested list
+
+def show_startup_log():
+    """
+    Jupyter notebooks don't show `print`s. So this function is needed to explain where
+    imports come from.
+    """
+    for msgs in _startup_log:
+        print(*msgs)
+
+
+_log(f"Running `{__file__}`")
 
 # If the last executed expression was an assignment, print the assigned value, instead
 # of nothing. This obviates the need to retype the variable name, as in `myprod=3*7;
@@ -11,8 +26,9 @@ InteractiveShell.ast_node_interactivity = "last_expr_or_assign"
 # upgrade IPython (it's disabled again in 8.1): open an elevated prompt, run `condini`
 # (to activate base; see `~/.bashrc`), and run `pip install -U ipython`.
 
+#
 import sys, os, re, shutil, pathlib, math, random, \
-       itertools, functools, collections, datetime    # (Using braces not allowed here).
+       itertools, functools, collections, datetime    # (Braces are not allowed here).
 #
 from time import time
 from pathlib import Path
@@ -23,4 +39,4 @@ from collections import defaultdict
 # is now guaranteed to yield items in insertion order. Differences between the two:
 # https://realpython.com/python-ordereddict/#selecting-the-right-dictionary-for-the-job
 #
-print("Imported some stdlib functions and namespaces.")
+_log("Imported some stdlib names: `sys`, `re`, `Path`, etc.")
