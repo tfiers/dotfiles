@@ -1,20 +1,5 @@
 
-_startup_log = []
-
-def _log(*msgs):
-    print(*msgs)
-    _startup_log.append(msgs)  # not `extend`; i.e. we create a nested list
-
-def show_startup_log():
-    """
-    Jupyter notebooks don't show `print`s. So this function is needed to explain where
-    imports come from.
-    """
-    for msgs in _startup_log:
-        print(*msgs)
-
-
-_log(f"Running `{__file__}`")
+print(f"Running `{__file__}`")
 
 # If the last executed expression was an assignment, print the assigned value, instead
 # of nothing. This obviates the need to retype the variable name, as in `myprod=3*7;
@@ -39,4 +24,4 @@ from collections import defaultdict
 # is now guaranteed to yield items in insertion order. Differences between the two:
 # https://realpython.com/python-ordereddict/#selecting-the-right-dictionary-for-the-job
 #
-_log("Imported some stdlib names: `sys`, `re`, `Path`, etc.")
+print("Imported some stdlib names: `sys`, `re`, `Path`, etc.")
