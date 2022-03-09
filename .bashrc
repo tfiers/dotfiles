@@ -8,7 +8,7 @@ alias ll="ls -la"
 alias cl="clear"
 alias jup="jupyter notebook"
 alias ip="ipython"
-alias condini="configure_bash_for_conda"  # "conda init"
+alias condinit="configure_bash_for_conda"
 
 # Configure bash to be able to use `conda activate {envname}` etc.
 # We don't do this by default (i.e. run this here in `.bashrc`), as it's slow.
