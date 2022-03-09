@@ -25,6 +25,15 @@
 
 <Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
 
+# Documenting some default WinCompose combinations:
+# - ∂: partial differential: `*..d`
+# - ̄a: combining overline ("macron"): `\=`
+#   (there are `_a` combos for one-character macrons, but those combos overlap
+#   with subscript for most lowercase letters.
+# - ̆a: combining breve: `\U`
+# - ̣a: combining dot below: `\!`
+# (Search WinCompose Sequences for "combining" to find others).
+
 # [Win-. doesn't have flag emojis (to not offend China etc I guess). Hence these]
 # `fl`, `fi`, `ff`, `fs` are ligatures (ﬂ ﬁ ﬀ ﬁ). `vn` is hacek (ň).
 # Hence `V` (vlag, vaandel).
