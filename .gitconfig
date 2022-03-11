@@ -111,6 +111,7 @@
         #  (Actual "git revert" command creates a new commit with reversals).
     rlh = reset --hard HEAD~1
         # Undo last commit, do not keep contents as unstaged changes.
+    sms = submodule status
 
 [diff "jupyternotebook"]
     command = git-nbdiffdriver diff
