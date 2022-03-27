@@ -8,13 +8,14 @@
 
 <Multi_key> <p> <r> <e> : "≺"  # precedence; "depends on"
 <Multi_key> <s> <u> <c> : "≻"  # succesion
-<Multi_key> <less> <greater> : "⇔"  # iff (als en slechts als, if and only if)
+<Multi_key> <i> <f> <f> : "⇔"  # if, if and only if, als en slechts als
 <Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal, loodrecht
 <Multi_key> <bar> <bar> <underscore> : "⫫"  # conditional independence
 <Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop. (∃ is EE)
 <Multi_key> <n> <e> : "∉"  # "not element of"
     # We cannot use `nin`, as `ni` is already `∋`. Nor `!in`, as `!` is "dot below": ị.
 
+<Multi_key> <less> <greater> : "↔"
 <Multi_key> <greater> <greater> : "→"  # this overrides "»"
 <Multi_key> <less> <less>       : "←"
 <Multi_key> <greater> <period> : "»"
