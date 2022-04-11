@@ -52,15 +52,16 @@
         # Meaning of that piece of Bash argument syntax: "insert first argument,
         # or, if not given, the default value (here: `-n 7`)".
     ld = "!f() { git log --pretty=dt ${1:--n 7}; }; f"
-    lb = "!f() { git log --graph --all --date-order ${1:--n 20}; }; f"  # "log branches"
+    lb = "!f() { git log --graph --branches --date-order ${1:--n 20}; }; f"  # "log branches"
         # Options:
         #   --graph         Draw branch history with `|/\` characters. Every `*`
         #                   is a commit. The line colors are confusing (they are
         #                   random, and not related to the colors of the ref
         #                   names); so don't mind them.
-        #   --all           Do not only show ancestors of HEAD (i.e. current
+        #   --branches      Do not only show ancestors of HEAD (i.e. current
         #                   commit), but also from other refs (i.e. other
         #                   branches).
+        #                   Replace with `--all` to also see remote (non-fetched) branches.
         #   --date-order    The default (`--topo-order`) avoids showing commits
         #                   from multiple 'lines of history' intermixed.
         #                   `--date-order` explicitly shows all historical
