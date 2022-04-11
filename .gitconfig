@@ -13,6 +13,12 @@
 
 [push]
     recurseSubmodules = on-demand
+    default = upstream
+        # What branch to push to when on `git push` (i.e. without refspec argument).
+        # Default is `simple`, which only pushes if remote name matches local name. I
+        # want to be able to have different names though (eg gh `tfiers/8/add-jb` vs
+        # local `add-jb`). `upstream` pushes to the remote branch marked `@{upstream}`
+        # in git.
 
 [log]
     date = format:%a %d-%b-%y %H:%M
