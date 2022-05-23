@@ -139,3 +139,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[advice]
+	useCoreFSMonitorConfig = false
+    # disable that "core.useBuiltinFSMonitor will be deprecated soon; use core.fsmonitor instead" message.
