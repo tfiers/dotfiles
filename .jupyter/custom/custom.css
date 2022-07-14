@@ -8,7 +8,7 @@
 	src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@latest/webfonts/JuliaMono-Regular.woff2");
 }
 .CodeMirror {
-    font-family: JuliaMono-Regular;
+    font-family: JuliaMono-Regular, monospace;
     font-size: 9.6pt;  /* default: 11pt */
 }
 
@@ -35,4 +35,12 @@ p {
 /* Associate bullet list with the text above */
 ul {
     margin-top: 0 !important;
+}
+
+/* Get multiple output plots next to each other */
+.output {
+    display: inline;
+}
+.output_area {
+    float: left;
 }
