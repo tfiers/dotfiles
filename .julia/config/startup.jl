@@ -1,17 +1,23 @@
-
 atreplinit() do repl
-    # Cannot import packages here (we're in a function i.e. not top-level); but we can
-    # include a file that can. (weird)
-    try
-        include(joinpath(@__DIR__, "replinit.jl"))
-    catch e
-        @error e
-        println("\nPackages required by `replinit.jl` may need to be installed.")
-        print("Run `~/.julia/config/install.jl`? [Y/n] >")
-        answer = readline()
-        if answer ∈ ["", "Y"]
-            include(joinpath(@__DIR__, "install.jl"))
-            include(joinpath(@__DIR__, "replinit.jl"))
+    expr = quote
+
+        ENV["JULIA_EDITOR"] = "code.cmd"
+            # Without this, `@edit` opens the right file in vscode, but does not jump to the
+            # right location. My docs edit: https://github.com/JuliaLang/julia/pull/44083
+
+        print("Setting up OhMyREPL … ")
+        using OhMyREPL
+        OhMyREPL.colorscheme!("OneDark")
+        OhMyREPL.enable_autocomplete_brackets(true)
+        OhMyREPL.Passes.RainbowBrackets.activate_256colors()
+        println("done")
+
+        # If the current dir is a project, auto-activate it.
+        using Pkg
+        if isfile("Project.toml")
+            Pkg.activate(".")
         end
+
     end
+    eval(expr)
 end
