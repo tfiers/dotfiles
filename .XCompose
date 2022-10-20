@@ -41,6 +41,10 @@
 # - ⋮   `v..` (vertical ellipsis, vellips)
 # - ⋱  `.\.` (down right diagonal ellipsis)
 # - ⋰  `/..`
+# - ≡  `==`  (defined as, identical to)
+# - ≔ `:=`  ('colon equals'. also 'defined as': https://mathworld.wolfram.com/Defined.html)
+#            See also https://math.stackexchange.com/questions/182101/appropriate-notation-equiv-versus
+#            → Use ≔ for 'is defined as', as it's an assymetrical relationship, just like the symbol.
 #
 # Combining:
 # - ̄a: `\=` (combining overline ("macron"))
@@ -61,6 +65,14 @@
 # - ↳
 # - ┗  (https://en.wikipedia.org/wiki/Box-drawing_character#Box_Drawing)
 # - └
+#
+# ≈ latex<>unicode mappings, from
+# https://milde.users.sourceforge.net/LUCR/Math/unimathsymbols.pdf.
+# Also see: https://en.wiktionary.org/wiki/Appendix:Unicode/Letterlike_Symbols
+#
+# - ℝ     (\mathbb{R} (blackboard bold), reals. 'double-struck capital R')
+# - ℒ, ℓ  (\mathcal{L} (caligraphy), likelihood. 'script capital/small L')
+<Multi_key> <L> <L> : "ℒ"
 
 # [Win-. doesn't have flag emojis (to not offend China etc I guess). Hence these]
 # `fl`, `fi`, `ff`, `fs` are ligatures (ﬂ ﬁ ﬀ ﬁ). `vn` is hacek (ň).
