@@ -8,7 +8,7 @@
 
 <Multi_key> <p> <r> <e> : "≺"  # precedence; "depends on"
 <Multi_key> <s> <u> <c> : "≻"  # succesion
-<Multi_key> <i> <f> <f> : "⇔"  # if, if and only if, als en slechts als
+<Multi_key> <i> <f> <f> : "⇔"  # if and only if, als en slechts als
 <Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal, loodrecht
 <Multi_key> <bar> <bar> <underscore> : "⫫"  # conditional independence
 <Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop. (∃ is EE)
@@ -26,14 +26,35 @@
 
 <Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
 
-# Documenting some default WinCompose combinations:
-# - ∂: partial differential: `*..d`
-# - ̄a: combining overline ("macron"): `\=`
+# Documenting some default WinCompose combinations
+#
+# - ∂: `..d` (partial differential)
+# - × : `xx`  (\times, multiplication sign, cross)
+# - ≫: `+>` (much greater than, >>)
+# - ⋙: `3>` (very much greater than). (`++>` not working).
+# - ⋮   `v..` (vertical ellipsis, vellips)
+# - ⋱  `.\.` (down right diagonal ellipsis)
+# - ⋰  `/..`
+#
+# Combining:
+# - ̄a: `\=` (combining overline ("macron"))
 #   (there are `_a` combos for one-character macrons, but those combos overlap
-#   with subscript for most lowercase letters.
-# - ̆a: combining breve: `\U`
-# - ̣a: combining dot below: `\!`
+#   with subscript for most lowercase letters).
+# - ̆a: `\U` (combining breve)
+# - ̣a: `\!` (combining dot below)
 # (Search WinCompose Sequences for "combining" to find others).
+#
+# Bullets:
+# - ·: `.-` (\cdot, middle dot)
+# - •: `.=` (black small circle)
+# - ●: n/a  (black circle)
+# - ‣: `|>` (triangular bullet)
+# - ⁃: `o_` ('hyphen bullet)
+#
+# Arrows & box drawing.
+# - ↳
+# - ┗  (https://en.wikipedia.org/wiki/Box-drawing_character#Box_Drawing)
+# - └
 
 # [Win-. doesn't have flag emojis (to not offend China etc I guess). Hence these]
 # `fl`, `fi`, `ff`, `fs` are ligatures (ﬂ ﬁ ﬀ ﬁ). `vn` is hacek (ň).
