@@ -15,6 +15,10 @@
 <Multi_key> <n> <e> : "∉"  # "not element of"
     # We cannot use `nin`, as `ni` is already `∋`. Nor `!in`, as `!` is "dot below": ị.
 
+# <Multi_key> <P> <P> : "P \\left( \\;\\middle|\\; \\right)"  # P(x|y).  Overrides `¶`.
+# ^ This is fancy, for if large terms.
+#   But just use `P( \mid )`, which has good spacing already (unlike `P( | )`).
+
 <Multi_key> <less> <greater> : "↔"
 <Multi_key> <greater> <greater> : "→"  # this overrides "»"
 <Multi_key> <less> <less>       : "←"
@@ -23,8 +27,10 @@
 <Multi_key> <p> <p>    : "£"
 <Multi_key> <e> <e>    : "€"
 <Multi_key> <c> <m>    : "✔"  # 𝐜heck 𝐦ark
-
 <Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
+<Multi_key> <\> <greater> : "↘"  # south-east arrow (down right, decreasing)
+<Multi_key> </> <greater> : "↗"  # north-east arrow (up right, increasing)
+
 
 # Documenting some default WinCompose combinations
 #
