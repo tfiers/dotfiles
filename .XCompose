@@ -24,6 +24,7 @@
 <Multi_key> <less> <less>       : "←"
 <Multi_key> <greater> <period> : "»"
 <Multi_key> <less> <period>    : "«"
+<Multi_key> <m> <t>    : "↦"  # \mapsto, maps to, 'maplet arrow'
 <Multi_key> <p> <p>    : "£"
 <Multi_key> <e> <e>    : "€"
 <Multi_key> <c> <m>    : "✔"  # 𝐜heck 𝐦ark
@@ -70,10 +71,14 @@
 # https://milde.users.sourceforge.net/LUCR/Math/unimathsymbols.pdf.
 # Also see: https://en.wiktionary.org/wiki/Appendix:Unicode/Letterlike_Symbols
 #
-# - ℝ     (\mathbb{R} (blackboard bold), reals. 'double-struck capital R')
-# - ℒ, ℓ  (\mathcal{L} (caligraphy), likelihood. 'script capital/small L')
-<Multi_key> <L> <L> : "ℒ"
-<Multi_key> <N> <N> : "𝒩"  # (\mathcal{N}, normal distribution, script L)
+# - ℝ: `|R`     (\mathbb{R} (blackboard bold), reals. 'double-struck capital R')
+# - ℕ, ℤ, ℚ, ℂ
+# - ℓ: `ll`     ('script small L')
+<Multi_key> <L> <L> : "ℒ"   # (\mathcal{L} (caligraphy), likelihood, 'script capital N')
+<Multi_key> <N> <N> : "𝒩"  # (\mathcal{N}, normal distribution, script N)
+
+
+
 
 
 # [Win-. doesn't have flag emojis (to not offend China etc I guess). Hence these]
