@@ -3,6 +3,7 @@
 
 alias j="julia"
 alias js="julia --sysimage=$HOME/phd/sysimg/mysys.dll"
+alias jn="julia --startup-file=no"
 alias e="explorer ."
 alias c="code ."
 alias ll="ls -la"
