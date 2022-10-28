@@ -35,7 +35,8 @@
 
 # Documenting some default WinCompose combinations
 #
-# - ∂: `..d` (partial differential)
+# - ∂: `*..d` (partial differential)
+<Multi_key> <p> <d> : "∂"
 # - × : `xx`  (\times, multiplication sign, cross)
 # - ≫: `+>` (much greater than, >>)
 # - ⋙: `3>` (very much greater than). (`++>` not working).
