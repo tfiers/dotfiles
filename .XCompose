@@ -31,6 +31,8 @@
 <Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
 <Multi_key> <\> <greater> : "↘"  # south-east arrow (down right, decreasing)
 <Multi_key> </> <greater> : "↗"  # north-east arrow (up right, increasing)
+<Multi_key> <v> <greater> : "↪"  # for commenting on a previous line of code
+
 
 
 # Documenting some default WinCompose combinations
@@ -65,6 +67,7 @@
 #
 # Arrows & box drawing.
 # - ↳
+# - ↪  (see above for sequence)
 # - ┗  (https://en.wikipedia.org/wiki/Box-drawing_character#Box_Drawing)
 # - └
 #
