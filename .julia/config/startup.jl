@@ -54,7 +54,7 @@ macro re()
     end
 end
 
-macro newpkg(name::Symbol, testdir::Bool = false)
+macro newpkg(name::Symbol)
     pkgname = string(name)
     quote
         @withfb "Loading PkgTemplates" (
@@ -62,19 +62,18 @@ macro newpkg(name::Symbol, testdir::Bool = false)
             # ↪ Doing `@eval using PkgTemplates` in the function (`_newpkg`) does not work
             #   (`MethodError: no method matching License(; name="MIT")`).
         )
-        _newpkg($pkgname, $testdir)
+        _newpkg($pkgname)
     end
 end
 
-function _newpkg(name::String, testdir::Bool)
+function _newpkg(name::String)
     @withfb "Instantiating Template" begin
-        tests = (testdir) ? Tests(project = true) : !Tests
         genpkg = Template(
             julia = v"1.2",  # Required for `Tests(project = true)`
             plugins = [
                 License(name = "MIT"),
                 Git(ssh = true),
-                tests,
+                Tests(project = true),
                 !CompatHelper,
                 !TagBot,
                 Develop(),
