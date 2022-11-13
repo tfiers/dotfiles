@@ -9,11 +9,22 @@
 <Multi_key> <p> <r> <e> : "≺"  # precedence; "depends on"
 <Multi_key> <s> <u> <c> : "≻"  # succesion
 <Multi_key> <i> <f> <f> : "⇔"  # if and only if, als en slechts als
+<Multi_key> <b> <l>: "↯"        # bliksemschicht, lightning bolt, conflict, clash. [1]
 <Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal, loodrecht
 <Multi_key> <bar> <bar> <underscore> : "⫫"  # conditional independence
 <Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop. (∃ is EE)
 <Multi_key> <n> <e> : "∉"  # "not element of"
     # We cannot use `nin`, as `ni` is already `∋`. Nor `!in`, as `!` is "dot below": ị.
+
+# [1]: There's multiple unicode bliksems:
+#      - ↯ : U+21AF DOWNWARDS ZIGZAG ARROW
+#            (in "Arrows" block. unicode comment: "electrolysis")
+#            The other one (line below) messes with spacing after. So I choose this one.
+#      - ⭍ : U+2B4D Downwards Triangle-Headed Zigzag Arrow
+#            (in "Miscellaneous Symbols and Arrows" block. no comment)
+#      - ☡ : Bourbaki dangerous bend (U+2621 CAUTION SIGN)
+#      - 🗲
+#      - ⚡
 
 # <Multi_key> <P> <P> : "P \\left( \\;\\middle|\\; \\right)"  # P(x|y).  Overrides `¶`.
 # ^ This is fancy, for if large terms.
