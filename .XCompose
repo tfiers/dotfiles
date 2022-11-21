@@ -9,14 +9,14 @@
 <Multi_key> <p> <r> <e> : "≺"  # precedence; "depends on"
 <Multi_key> <s> <u> <c> : "≻"  # succesion
 <Multi_key> <i> <f> <f> : "⇔"  # if and only if, als en slechts als
-<Multi_key> <b> <l>: "↯"        # bliksemschicht, lightning bolt, conflict, clash. [1]
 <Multi_key> <bar> <underscore>       : "⟂"  # independence, orthogonal, loodrecht
 <Multi_key> <bar> <bar> <underscore> : "⫫"  # conditional independence
 <Multi_key> <V> <A> : "∀"  # for all, voor alle, koetje op z'n kop. (∃ is EE)
 <Multi_key> <n> <e> : "∉"  # "not element of"
     # We cannot use `nin`, as `ni` is already `∋`. Nor `!in`, as `!` is "dot below": ị.
 
-# [1]: There's multiple unicode bliksems:
+<Multi_key> <b> <l>: "↯"        # bliksemschicht, lightning bolt, conflict, clash.
+# There's multiple unicode bliksems:
 #      - ↯ : U+21AF DOWNWARDS ZIGZAG ARROW
 #            (in "Arrows" block. unicode comment: "electrolysis")
 #            The other one (line below) messes with spacing after. So I choose this one.
@@ -36,16 +36,19 @@
 <Multi_key> <^> <^> <space>     : "↑"  # (^^ itself is a prefix for ^^j (ʲ), ^^w, etc (^j is ĵ)).
 <Multi_key> <v> <v>             : "↓"  # This overrides ʌ, "latin small letter turned v"
 <Multi_key> <greater> <period> : "»"
-<Multi_key> <less> <period>    : "«"ʌ
+<Multi_key> <less> <period>    : "«"
 <Multi_key> <m> <t>    : "↦"  # \mapsto, maps to, 'maplet arrow'
 <Multi_key> <p> <p>    : "£"
 <Multi_key> <e> <e>    : "€"
 <Multi_key> <c> <m>    : "✔"  # 𝐜heck 𝐦ark
 <Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
 <Multi_key> <\> <greater> : "↘"  # south-east arrow (down right, decreasing)
+<Multi_key> <\> <\>       : "↘"
 <Multi_key> </> <greater> : "↗"  # north-east arrow (up right, increasing)
+<Multi_key> </> </>       : "↗"
 <Multi_key> <v> <greater> : "↪"  # for commenting on a previous line of code
-<Multi_key> <v> <m> : "↪"        # This is same as previous, but when I forget shift for `>`
+<Multi_key> <v> <m>       : "↪"  # This is same as previous; but that combo is a bit
+                                  # cumbersome, and this is what I type naturally instead
 
 
 
