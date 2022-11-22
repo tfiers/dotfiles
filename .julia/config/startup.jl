@@ -16,6 +16,9 @@ end
 #
 # An alternative solution might be a system image with OhMyREPL / Revise included (though
 # system images have a small startup cost too).
+#
+# The `@async @eval using Revise` trick (from https://m3g.github.io/JuliaNotes.jl/stable/fastrepl/)
+# does not work. (We still have to wait until it's loaded before we can start).
 
 macro withfb(descr, expr)
     quote
