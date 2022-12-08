@@ -1,46 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
   <info>
-    <title>IEEE</title>
-    <id>http://www.zotero.org/styles/ieee</id>
+    <title>IEEE-tfiers-customised</title>
+    <id>http://www.zotero.org/styles/ieee-tfiers-customised</id>
     <link href="http://www.zotero.org/styles/ieee" rel="self"/>
     <!-- <link href="https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf" rel="documentation"/> - 2018 guidelines -->
     <link href="http://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE_Reference_Guide.pdf" rel="documentation"/>
     <link href="https://journals.ieeeauthorcenter.ieee.org/your-role-in-article-production/ieee-editorial-style-manual/" rel="documentation"/>
     <author>
-      <name>Michael Berkowitz</name>
-      <email>mberkowi@gmu.edu</email>
+      <name>tfiers (see original for real authros)</name>
+      <email>tomas.fiers@gmail.com</email>
     </author>
-    <contributor>
-      <name>Julian Onions</name>
-      <email>julian.onions@gmail.com</email>
-    </contributor>
-    <contributor>
-      <name>Rintze Zelle</name>
-      <uri>http://twitter.com/rintzezelle</uri>
-    </contributor>
-    <contributor>
-      <name>Stephen Frank</name>
-      <uri>http://www.zotero.org/sfrank</uri>
-    </contributor>
-    <contributor>
-      <name>Sebastian Karcher</name>
-    </contributor>
-    <contributor>
-      <name>Giuseppe Silano</name>
-      <email>g.silano89@gmail.com</email>
-      <uri>http://giuseppesilano.net</uri>
-    </contributor>
-    <contributor>
-      <name>Patrick O'Brien</name>
-    </contributor>
-    <contributor>
-      <name>Brenton M. Wiernik</name>
-    </contributor>
-    <contributor>
-      <name>Oliver Couch</name>
-      <email>oliver.couch@gmail.com</email>
-    </contributor>
     <category citation-format="numeric"/>
     <category field="engineering"/>
     <category field="generic-base"/>
@@ -89,7 +59,7 @@
     <choose>
       <if type="article-journal report" match="any">
         <date variable="issued">
-          <date-part name="month" form="short" suffix=" "/>
+          <!-- <date-part name="month" form="short" suffix=" "/> -->
           <date-part name="year" form="long"/>
         </date>
       </if>
@@ -113,9 +83,12 @@
     </choose>
   </macro>
   <macro name="author">
+    <!-- See https://docs.citationstyles.org/en/stable/specification.html#names -->
     <names variable="author">
-      <name and="text" et-al-min="7" et-al-use-first="1" initialize-with=". "/>
-      <label form="short" prefix=", " text-case="capitalize-first"/>
+      <!-- <name and="text" et-al-min="7" et-al-use-first="1" initialize-with=". "/> -->
+      <!-- <label form="short" prefix=", " text-case="capitalize-first"/> -->
+      <!-- Thx https://forums.zotero.org/discussion/5442/only-last-name-in-citation: -->
+      <name form="short" and="symbol" delimiter=", " initialize-with=""/>
       <et-al font-style="italic"/>
       <substitute>
         <names variable="editor"/>
@@ -218,7 +191,8 @@
       </if>
       <else-if match="any" variable="DOI">
         <!-- doi: 10.1000/xyz123. -->
-        <text variable="DOI" prefix=" doi: " suffix="."/>
+        <!-- <text variable="DOI" prefix=" doi: " suffix="."/> -->
+        <text variable="DOI" prefix=" " suffix="."/>
       </else-if>
       <else-if variable="URL">
         <!-- Accessed: Mon. DD, YYYY. [Medium]. Available: https://URL.com/ -->
@@ -308,23 +282,25 @@
     </layout>
   </citation>
   <!-- Bibliography -->
-  <bibliography entry-spacing="0" second-field-align="flush">
+  <!-- <bibliography entry-spacing="0" second-field-align="flush"> -->
+  <bibliography entry-spacing="0">
     <layout>
       <!-- Citation Number -->
-      <text variable="citation-number" prefix="[" suffix="]"/>
+      <!-- <text variable="citation-number" prefix="[" suffix="]"/> -->
       <!-- Author(s) -->
-      <text macro="author" suffix=", "/>
+      <!-- <text macro="author" suffix=", "/> -->
+      <text macro="author" suffix=" "/>
       <!-- Rest of Citation -->
       <choose>
         <!-- Specific Formats -->
         <if type="article-journal">
           <group delimiter=", ">
-            <text macro="title"/>
-            <text variable="container-title" font-style="italic" form="short"/>
-            <text macro="locators"/>
-            <text macro="page"/>
+            <!-- <text macro="title"/> -->
+            <!-- <text variable="container-title" font-style="italic" form="short"/> -->
+            <!-- <text macro="locators"/> -->
+            <!-- <text macro="page"/> -->
             <text macro="issued"/>
-            <text macro="status"/>
+            <!-- <text macro="status"/> -->
           </group>
           <choose>
             <if variable="URL DOI" match="none">
