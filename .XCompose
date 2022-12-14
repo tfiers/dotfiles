@@ -98,6 +98,9 @@
 <Multi_key> <L> <L> : "ℒ"   # (\mathcal{L} (caligraphy), likelihood, 'script capital N')
 <Multi_key> <N> <N> : "𝒩"  # (\mathcal{N}, normal distribution, script N)
 
+# Matrix transpose (fake):
+<Multi_key> <^> <T> : "ᵀ"
+
 
 
 
