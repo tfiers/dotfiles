@@ -73,6 +73,7 @@
 #   with subscript for most lowercase letters).
 # - ̆a: `\U` (combining breve)
 # - ̣a: `\!` (combining dot below)
+# - ȧ: `\.` (combining dot above). Newton's (time) derivative notation. (da/dt)
 # (Search WinCompose Sequences for "combining" to find others).
 #
 # Bullets:
