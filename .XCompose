@@ -42,14 +42,33 @@
 <Multi_key> <e> <e>    : "€"
 <Multi_key> <c> <m>    : "✔"  # 𝐜heck 𝐦ark
 <Multi_key> <s> <i> <g> : "Best,\nTomas Fiers"
+
 <Multi_key> <\> <greater> : "↘"  # south-east arrow (down right, decreasing)
 <Multi_key> <\> <\>       : "↘"
+
 <Multi_key> </> <greater> : "↗"  # north-east arrow (up right, increasing)
 <Multi_key> </> </>       : "↗"
+
+<Multi_key> <^> <\>       : "↖"
+<Multi_key> </> <v>       : "↙"  # overrides a √ doublet (but is fine, `v/` is more natural).
+
 <Multi_key> <v> <greater> : "↪"  # for commenting on a previous line of code
 <Multi_key> <v> <m>       : "↪"  # This is same as previous; but that combo is a bit
                                   # cumbersome, and this is what I type naturally instead
 
+<Multi_key> <1> <1> <space> : "¹"
+<Multi_key> <2> <2> <space> : "²"
+<Multi_key> <3> <3> <space> : "³"
+<Multi_key> <4> <4> <space> : "⁴"
+<Multi_key> <5> <5> <space> : "⁵"
+<Multi_key> <6> <6> <space> : "⁶"
+<Multi_key> <7> <7> <space> : "⁷"
+<Multi_key> <8> <8> <space> : "⁸"
+<Multi_key> <9> <9> <space> : "⁹"
+<Multi_key> <0> <0> <space> : "⁰"
+
+<Multi_key> <e> <e>    : "ₑ"  # Overrides 'euro' above
+<Multi_key> <i> <i>    : "ᵢ"
 
 
 # Documenting some default WinCompose combinations
