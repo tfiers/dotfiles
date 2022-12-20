@@ -10,6 +10,8 @@ atreplinit() do repl
     # right location. My docs edit: https://github.com/JuliaLang/julia/pull/44083
 end
 
+paste() = eval(Base.Meta.parse(clipboard()))
+
 # Loading the functionality below takes a while. If we have started julia just for a one off
 # command (like using the package manager), we don't want to wait for them. Hence why we put
 # them in on-demand macros, instead of executing them automatically at-repl-init.
@@ -98,9 +100,11 @@ function _newpkg(name::String)
                 #   OOrrr: don't use this Plugin. There's too much to tweak with it.
                 GitHubActions(
                     coverage = false,
+                    # For new features and changes per version,
+                    # see https://github.com/JuliaLang/julia/blob/master/HISTORY.md
                     extra_versions = [
                         # "1.2",    # Aug 2019
-                        # "1.3",    # Nov 2019
+                        # "1.3",    # Nov 2019. Artifacts.jl
                         # "1.4",    # Mar 2020
                         # "1.5",    # Aug 2020
                         "1.6",      # Mar 2021. LTS
