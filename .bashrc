@@ -18,3 +18,13 @@ alias condinit="configure_bash_for_conda"
 configure_bash_for_conda() {
     eval "$('conda' 'shell.bash' 'hook')"
 }
+
+# From https://unix.stackexchange.com/questions/125385/combined-mkdir-and-cd
+# -p: for if mkdirc'ing /with/parents
+# -P: resolve symbolic links (when useful?)
+# "$1": protect the argument when spaces
+# --: so you can make a directory starting with `-` or `--`
+mkdirc () {
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
