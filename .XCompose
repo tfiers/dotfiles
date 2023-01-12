@@ -68,7 +68,12 @@
 <Multi_key> <0> <0> <space> : "⁰"
 
 <Multi_key> <e> <e>    : "ₑ"  # Overrides 'euro' above
+<Multi_key> <e> <u>    : "€"  # (alt: C=, c=)
 <Multi_key> <i> <i>    : "ᵢ"
+<Multi_key> <t> <t>    : "ₜ"
+<Multi_key> <l> <l>    : "ₗ"  # overrides my own ℓ below, lol
+<Multi_key> <r> <r>    : "ᵣ"  # overrides ɹ
+<Multi_key> <s> <s>    : "ₛ"  # overrides ß (ringel-s)
 
 
 # Documenting some default WinCompose combinations
