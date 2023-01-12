@@ -8,7 +8,7 @@ alias e="explorer ."
 alias c="code ."
 alias ll="ls -la"
 alias cl="clear"
-alias jup="jupyter notebook"
+alias jup="jupyter lab"
 alias ip="ipython"
 alias condinit="configure_bash_for_conda"
 
@@ -24,7 +24,8 @@ configure_bash_for_conda() {
 # -P: resolve symbolic links (when useful?)
 # "$1": protect the argument when spaces
 # --: so you can make a directory starting with `-` or `--`
-mkdirc () {
+mkcdir () {
     mkdir -p -- "$1" &&
        cd -P -- "$1"
 }
+alias mkdirc="mkcdir"
