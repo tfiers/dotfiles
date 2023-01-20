@@ -29,3 +29,7 @@ mkcdir () {
        cd -P -- "$1"
 }
 alias mkdirc="mkcdir"
+
+# opam configuration (OCaml)
+# test -r /root/.opam/opam-init/init.sh && \
+#   . /root/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
