@@ -12,6 +12,8 @@ alias jup="jupyter lab --allow-root"
 alias ip="ipython"
 alias condinit="configure_bash_for_conda"
 
+export JULIA_NUM_THREADS=7
+
 # Configure bash to be able to use `conda activate {envname}` etc.
 # We don't do this by default (i.e. run this here in `.bashrc`), as it's slow.
 # (maybe `mamba init` is faster?)
