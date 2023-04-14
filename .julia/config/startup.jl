@@ -5,9 +5,14 @@ atreplinit() do repl
     if isfile("Project.toml")
         Pkg.activate(".")
     end
-    ENV["JULIA_EDITOR"] = "code.cmd"
-    # Without this, `@edit` opens the right file in vscode, but does not jump to the
-    # right location. My docs edit: https://github.com/JuliaLang/julia/pull/44083
+    if Sys.iswindows()
+        ENV["JULIA_EDITOR"] = "code.cmd"
+        # Without this, `@edit` opens the right file in vscode, but does
+        # not jump to the right location. My docs edit:
+        # https://github.com/JuliaLang/julia/pull/44083
+    else
+        ENV["JULIA_EDITOR"] = "code"
+    end
 end
 
 paste() = eval(Base.Meta.parse(clipboard()))
@@ -22,13 +27,15 @@ paste() = eval(Base.Meta.parse(clipboard()))
 # The `@async @eval using Revise` trick (from https://m3g.github.io/JuliaNotes.jl/stable/fastrepl/)
 # does not work. (We still have to wait until it's loaded before we can start).
 
-macro withfb(descr, expr)
-    quote
-        print($descr, " … ")
-        $(esc(expr))
-        println("done")
-    end
-end
+# Commenting out, as I've a pkg now (phd/pkg/WithFeedback)
+#
+# macro withfb(descr, expr)
+#     quote
+#         print($descr, " … ")
+#         $(esc(expr))
+#         println("done")
+#     end
+# end
 
 macro omr()
     precompile_file = joinpath(@__DIR__, "repl-trace-compile.jl")
@@ -42,9 +49,9 @@ macro omr()
             OhMyREPL.enable_autocomplete_brackets(true)
             OhMyREPL.Passes.RainbowBrackets.activate_256colors()
         end
-        @withfb "Precompiling REPL usage" (
-            include($precompile_file)
-        )
+        # @withfb "Precompiling REPL usage" (
+        #     include($precompile_file)
+        # )
         # ↪ Done by OhMyREPL itself now:
         #   https://github.com/KristofferC/OhMyREPL.jl/pull/288
         #   ..though that only caches llvm IR I think, not native
