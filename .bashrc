@@ -8,7 +8,7 @@ alias e="explorer ."
 alias c="code ."
 alias ll="ls -la"
 alias cl="clear"
-alias jup="jupyter lab --allow-root"
+alias jup="jupyter notebook --allow-root"
 alias ip="ipython"
 alias condinit="configure_bash_for_conda"
 
